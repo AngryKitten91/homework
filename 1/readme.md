@@ -20,6 +20,7 @@ scss
 ├─┬ partials
 │ ├── _main.scss
 │ └── _variables.scss
+├── gulpfile.js
 ├── readme.md
 ├── styles.css
 └── styles.scss
