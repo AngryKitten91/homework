@@ -1,0 +1,31 @@
+
+// STYLES
+
+.error {
+    background: $errorColor;
+    color: #ffffff;
+}
+
+// SOLUTION 1 : EXTENDED CLASS VERSION
+@for $i from 12 to 22 {
+    .paragraph-#{$i} {
+        font-size: $i * 1px;
+    }
+    .paragraph-#{$i}--alert {
+        @extend .paragraph-#{$i};
+        color: $errorColor;
+    }
+}
+
+// SOLUTION 2 : REGULAR VERSION
+// @for $i from 12 to 22 {
+//     /* PARAGRAPH #{$i} */
+//     .paragraph-#{$i} {
+//         font-size: $i * 1px;
+//     }
+//     .paragraph-#{$i}--alert {
+//         font-size: $i * 1px;
+//         color: $errorColor;
+//     }
+// }
+
