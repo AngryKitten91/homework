@@ -1,0 +1,38 @@
+.c-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        & > img {
+            max-width: 150px;
+        }
+    }
+
+    &__nav {
+        
+    }
+}
+
+@media screen and (max-width: $small){
+    .c-header {
+        @include flex(flex, center, center);
+        flex-wrap: wrap;
+        &__logo {
+            @include flex(flex, center, center);
+            flex-basis: 100%;
+            & > img {
+                max-width: 300px;
+            }
+        }
+    
+        &__nav {
+            @include flex(flex, center, center);
+            flex-basis: 100%;
+            flex-wrap: wrap;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.c-navigation {
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        padding:20px;
+    }
+
+    &__link {}
+}
+
+@media screen and (max-width: $small){
+    .c-navigation {
+        &__list {
+            @include flex(flex, center, center);
+
+        }
+    
+        &__item {
+
+        }
+    
+        &__link {}
+    }
+}

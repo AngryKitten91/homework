@@ -1,0 +1,60 @@
+.c-testimonial {
+    text-align: justify;
+    line-height: $line-height;
+    &__image {}
+
+    &__desc {
+        font-style: italic;
+    }
+}
+
+.c-navigation__link{
+    color: $color6;
+    font-size: $font-size-nav;
+    font-weight: $font-weight-light;
+    &:hover{
+        color: $color1;
+        border-bottom: 3px solid $color1;
+    }
+}
+
+.c-content {
+    text-align: justify;
+    font-size: $font-size-medium;
+    line-height: $line-height;
+}
+
+.c-heading {
+    &--primary {
+        line-height: 2rem;
+    }
+}
+.c-article{
+    &__meta{
+        text-align: center;
+        color : $color7;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-medium;
+        border-radius: 20px;
+    }
+    &__link {
+        color: red;
+    }
+}
+
+.c-footer{
+    font-size: $font-size-medium;
+    text-align: center;
+    font-style: italic;
+    color: $color7;
+
+}
+
+.o-image {
+  
+    &__desc {
+        text-align: center;
+        font-size: $font-size-medium;
+        font-weight: $font-weight-bold;
+    }
+}

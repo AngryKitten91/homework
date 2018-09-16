@@ -1,0 +1,18 @@
+.o-image {
+    
+    &__pic {
+        max-width: 100%;
+        
+        
+    }
+    &__desc {
+        padding: 10px;
+    }
+    &__top {
+    }
+
+    &--rounded {
+        border-radius: 20px;
+    }
+    &--centered {}
+}

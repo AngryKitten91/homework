@@ -1,0 +1,19 @@
+body {
+    color: $color6;
+    font-size: $font-size-medium;
+    font-family: $font-open-sans;
+    font-weight: $font-weight-light;
+  }
+
+
+
+  @for $i from 1 to 7 {
+      h#{$i} {
+          font-size: 1/($i/3) * 1rem;
+      }
+  }
+
+a{
+  text-decoration: none;
+  color: $color6;
+}

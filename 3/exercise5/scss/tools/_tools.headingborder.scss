@@ -1,0 +1,4 @@
+@mixin headingborder($color){
+    border-left: 5px solid $color;
+    padding: 0 15px;
+}

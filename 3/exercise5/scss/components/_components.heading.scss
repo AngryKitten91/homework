@@ -1,0 +1,13 @@
+.c-heading {
+    text-align: left;
+    &--primary {
+        @include headingborder($color5);
+        margin: 50px 0 40px 0;
+
+    }
+
+    &--secondary {
+        @include headingborder($color4);
+        margin: 30px 0 30px 0;
+    }
+}

@@ -1,0 +1,26 @@
+.c-article {
+    
+    &__header {}
+
+    &__image {
+        opacity: 0.8;
+    }
+    &__meta {
+        background-color: $color3;
+        padding: 30px;
+        margin-top: 60px;
+    }
+    &__lead {}
+    &__link {
+        color: $color4;
+        &:hover{
+            color:$color1;
+        }
+    }
+
+    &__content {
+        & > p {
+            margin: 20px 0;
+        }
+    }
+}
