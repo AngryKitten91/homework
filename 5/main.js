@@ -77,6 +77,7 @@ function hasOneByOneDigit(val) {
     }
 }
 
+// days in month using new Date()
 function daysInMonth1(m, y) {
     if (y >= 1582 && y <= 9999) {
         let getDays = new Date(y, m, 0).getDate();
@@ -84,6 +85,7 @@ function daysInMonth1(m, y) {
     }
 }
 
+// days in month second approach
 function daysInMonth(m, y) {
     let months = {
         1: 31,
@@ -98,7 +100,7 @@ function daysInMonth(m, y) {
         10: 31,
         11: 30,
         12: 31
-    }
+    };
     if (y >= 1582 && y <= 9999) {
         if (m === 2 && (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0) {
             return months[m] + 1;
@@ -107,7 +109,6 @@ function daysInMonth(m, y) {
         }
     }
 }
-console.log(daysInMonth1(2, 1884));
 
 
 
