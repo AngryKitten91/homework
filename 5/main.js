@@ -37,12 +37,14 @@ function secondsToHHMMSS(seconds) {
     return `${addZeroOrNot(hours)}:${addZeroOrNot(minutes)}:${addZeroOrNot(sec)}`;
 }
 
-function swapVariables(a, b) {
-    return {
-        first: b,
-        second: a
-    };
-}
+//OLD SWAPVARIABLES FUNCTION
+
+// function swapVariables(a, b) {
+//     return {
+//         first: b,
+//         second: a
+//     };
+// }
 
 function minOfThreeNumbers(...args) {
     let sortedArray = args.sort((a, b) => a - b);
@@ -112,7 +114,18 @@ function daysInMonth(m, y) {
 
 
 
-// // TESTY
+// funkcja została zadeklarowana ze względu na testy
+// nic nie zmieniaj; dodaj jedynie implementację zamiany zmiennych
+
+// ++ OLD SWAP VARIABLES FUNCTION AT LINE 40 ++
+function swapVariables(first, second) { // nie zmieniaj kolejności ani nazw
+    first = second;
+    second = first;
+    swapVariablesCalled(first, second); // tego nie ruszaj
+}
+
+
+// TESTY
 function tests(a) {
     let b = 0;
     for (let c in a) {
@@ -148,6 +161,14 @@ function range(a, b) {
 function shuffle(arr) {
     return arr.sort(() => 1 - range(0, 2));
 }
+let swapVariablesCalledResult;
+
+function swapVariablesCalled(first, second) {
+    swapVariablesCalledResult = {
+        first,
+        second
+    };
+}
 tests({
     'add(1, 2) returns 3': () => {
         assertEquals(add(1, 2), 3);
@@ -177,10 +198,8 @@ tests({
     'swapVariables(x, y) returns { first: y, second: x }': () => {
         const x = range(1, 9);
         const y = x * range(1, 9);
-        assertEquals(JSON.stringify(swapVariables(x, y)), JSON.stringify({
-            first: y,
-            second: x
-        }));
+        swapVariables(x, y);
+        assertEquals(swapVariablesCalledResult.first, y);
     },
     'minOfThreeNumbers(a, b, c) returns a if a < b < c': () => {
         const a = range(1, 10);
