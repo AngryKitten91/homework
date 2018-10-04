@@ -4,8 +4,7 @@ function add(a, b) {
 // tutaj zaimplementuj wszystkie funkcje
 
 function evenOrOdd(number) {
-    let num = parseInt(number);
-    if (num % 2 === 0) {
+    if (parseInt(number) % 2 === 0) {
         return 'even';
     } else {
         return 'odd';
@@ -37,27 +36,19 @@ function secondsToHHMMSS(seconds) {
     return `${addZeroOrNot(hours)}:${addZeroOrNot(minutes)}:${addZeroOrNot(sec)}`;
 }
 
-//OLD SWAPVARIABLES FUNCTION
-
-// function swapVariables(a, b) {
-//     return {
-//         first: b,
-//         second: a
-//     };
-// }
-
 function minOfThreeNumbers(...args) {
     let sortedArray = args.sort((a, b) => a - b);
     return sortedArray[0];
 }
 
-function areNumbersDescending(numOne, numTwo, numThree, numFour, numFive) {
-    for (let i = 1; i < arguments.length; i++) {
-        if (arguments[i] > arguments[i - 1] || arguments[i] === arguments[i - 1]) {
-            return false;
-        } else {
+function areNumbersDescending() {
+    for (let i = 1; i <= arguments.length; i++) {
+        if (arguments[i] < arguments[i - 1]) {
+            continue;
+        } else if (i === arguments.length) {
             return true;
         }
+        return false;
     }
 }
 
@@ -119,8 +110,9 @@ function daysInMonth(m, y) {
 
 // ++ OLD SWAP VARIABLES FUNCTION AT LINE 40 ++
 function swapVariables(first, second) { // nie zmieniaj kolejności ani nazw
+    let firstVar = first;
     first = second;
-    second = first;
+    second = firstVar;
     swapVariablesCalled(first, second); // tego nie ruszaj
 }
 
