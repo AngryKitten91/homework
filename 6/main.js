@@ -141,6 +141,9 @@ let person1 = users.find((elem) => {
     }
 });
 
+// destructuring version
+// const person1 = users.find(({age, gender}) => age < 30 && gender === 'female');
+
 let person2 = users.find((elem) => {
     if (elem.age > 30 && elem.gender === 'male') {
         return elem;
